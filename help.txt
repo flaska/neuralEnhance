@@ -1,1 +1,4 @@
 docker run --rm -v `pwd`:/ne/input -it alexjc/neural-enhance --help
+
+# setup port forwarding
+sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-ports 8000
